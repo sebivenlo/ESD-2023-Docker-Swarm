@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  manager_container:
+    image: "docker:latest"
+    container_name: manager_container
+    tty: true
+    privileged: true
+    networks:
+      - harvy
+  worker_one_container:
+    image: "docker:latest"
+    container_name: worker_one_container
+    tty: true
+    privileged: true
+    networks:
+      - harvy
+  worker_two_container:
+    image: "docker:latest"
+    container_name: worker_two_container
+    tty: true
+    privileged: true
+    networks:
+      - harvy
+
+networks:
+  harvy:
