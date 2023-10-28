@@ -6,6 +6,10 @@ services:
     privileged: true
     networks:
       - harvy
+    ports:
+      - "1000:1000"
+      - "9000:9000"
+    tty: true
   worker_one_container:
     image: "docker:latest"
     container_name: worker_one_container
