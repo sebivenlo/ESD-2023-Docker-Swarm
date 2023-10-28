@@ -3,7 +3,6 @@ services:
   manager_container:
     image: "docker:latest"
     container_name: manager_container
-    tty: true
     privileged: true
     networks:
       - harvy
