@@ -8,6 +8,7 @@ That includes:
 - Presentation (if applicable)
 - References.
 - Docker (compose) file (if applicable)
+  - setup information
 
 
 # Notes 
