@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+  <title>Docker Swarm Services</title>
+</head>
+<body>
+  <h1>Docker Swarm Services</h1>
+  {% for service in services %}
+    <h2>{{ service.name }}</h2>
+    <ul>
+      {% for task in tasks[service.id] %}
+        <li>{{ task['Status']['State'] }} - {{ task['NodeID'] }}</li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</body>
+</html>
