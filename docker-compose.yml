@@ -24,6 +24,16 @@ services:
     privileged: true
     networks:
       - harvy
+  web_container:
+    build:
+      dockerfile: Docker/Dockerfile
+    container_name: web_container
+    tty: true
+    privileged: true
+    ports:
+      - "5000:5000"
+    networks:
+      - harvy
 
 networks:
   harvy:
