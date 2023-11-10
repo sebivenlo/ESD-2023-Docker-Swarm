@@ -7,7 +7,10 @@ client = docker.from_env()
 
 @app.route('/')
 def list_services():
-    services = client.services.list()
+    try:
+        services = client.services.list()
+    except Exception:
+        return render_template('services.html', services=[], tasks=[])
     tasks = {service.id: service.tasks() for service in services}
     return render_template('services.html', services=services, tasks=tasks)
 
