@@ -1,0 +1,8 @@
+FROM docker
+
+WORKDIR /app
+
+COPY /web/Service /app
+
+COPY /Docker/dockerfile /app
+

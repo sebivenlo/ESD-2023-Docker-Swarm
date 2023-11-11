@@ -11,14 +11,16 @@ services:
       - "9000:9000"
     tty: true
   worker_one_container:
-    image: "docker:latest"
+    build:
+      dockerfile: Docker/Dockerfile_Worker
     container_name: worker_one_container
     tty: true
     privileged: true
     networks:
       - harvy
   worker_two_container:
-    image: "docker:latest"
+    build:
+      dockerfile: Docker/Dockerfile_Worker
     container_name: worker_two_container
     tty: true
     privileged: true
@@ -36,12 +38,13 @@ services:
       - harvy
   web_container2:
     build:
-      dockerfile: Docker/DockerFile_ShowService
+      dockerfile: Docker/Dockerfile_ShowService
     container_name: web_container2
     tty: true
     privileged: true
     ports:
-      - "80:3000"
+      - "90:3000"
+      - "80:80"
     networks:
       - harvy
 
