@@ -1,10 +1,9 @@
 FROM docker
 
-RUN apk add nodejs npm
-
 WORKDIR /app
 
 COPY /web/Service /app
 
 COPY /Docker/dockerfile /app
-# CMD [ "node", "app.js" ]
+
+COPY /Docker/script.sh /app

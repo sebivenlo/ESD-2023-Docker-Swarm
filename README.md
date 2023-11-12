@@ -10,9 +10,3 @@ That includes:
 - Docker (compose) file (if applicable)
   - setup information
 
-
-# Notes 
-
-- Swarm as production runtime enviroment
-- Not deploying with Swarm = use docker compose instead
-- https://docs.docker.com/engine/swarm/
