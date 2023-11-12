@@ -2,7 +2,7 @@ FROM docker
 
 WORKDIR /app
 
-COPY /web/Service /app
+COPY /web /app
 
 COPY /Docker/dockerfile /app
 

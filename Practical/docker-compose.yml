@@ -16,24 +16,23 @@ services:
     privileged: true
     networks:
       - harvy
-  web_container1:
+  multiple_service_container:
     build:
       dockerfile: Docker/DockerFile_ShowMultipleServices
-    container_name: web_container1
+    container_name: multiple_service
     tty: true
     privileged: true
     ports:
       - "5000:5000"
     networks:
       - harvy
-  web_container2:
+  one_service:
     build:
       dockerfile: Docker/DockerFile_ShowOneService
-    container_name: web_container2
+    container_name: one_service
     privileged: true
     ports:
-      - "90:3000"
-      - "80:80"
+      - "4000:4000"
     networks:
       - harvy
 
